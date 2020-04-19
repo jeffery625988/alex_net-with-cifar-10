@@ -1,4 +1,8 @@
 import tensorflow as tf
+import os
+
+
+
 
 def print_activation(t):
     print(t.op.name,'',t.get_shape().as_list())
@@ -102,3 +106,6 @@ def model(images,dropout):
         out = tf.add(tf.matmul(fc2, out_weights), out_biases)
         parameters += [out_weights, out_biases]
     return out,parameters
+
+def test():
+    a=3
